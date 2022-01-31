@@ -1,0 +1,13 @@
+.card {
+    width: 400px;
+    height: 520px;
+    margin-left: 35px;
+    overflow: hidden;
+
+    &__image {
+        height: 330px;
+        background-size: cover;
+        background-position: top;
+        clip-path: polygon(0 0 , 100% 0 , 100% 85% , 0 100%);
+    }
+}

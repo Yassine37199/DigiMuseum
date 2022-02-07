@@ -6,12 +6,12 @@ import './card-list.styles.scss'
 
 
 
-export const CardList = ({artworks}) => (
+export const CardList = ({photos}) => (
 
     <div className="card-list">
         {
-            artworks.map(artwork => (
-                <Card key={artwork.id} artwork={artwork} />
+            photos.map(photo => (
+                <Card key={photo.id} photo={photo} />
             ))
         }
     </div>

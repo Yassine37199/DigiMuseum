@@ -8,27 +8,27 @@ class App extends Component {
     super(props);
 
     this.state = {
-      artworks : []
+      photos : []
     }
   }
 
 
   componentDidMount() {
 
-    fetch("https://api.artic.edu/api/v1/artworks?limit=30")
-    .then(res => res.json())
-    .then(res => this.setState({
-      artworks : res.data
-    } , () => console.log(this.state.artworks)))
-    
-
+      fetch("https://api.unsplash.com/photos/?client_id=8aY1-7ly756Pu0Ts1NsFsYmpqAPKFh3MoquNQT9u7Ng")
+      .then(res => res.json())
+      .then(res => this.setState({
+        photos : res
+      } , () => console.log(this.state.photos)))
+      
   }
+      
 
 
   render() {
     return (
       <div className="App">
-        <CardList artworks={this.state.artworks} />
+        {<CardList photos={this.state.photos} />}
       </div>
     );
   }

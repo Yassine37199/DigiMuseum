@@ -4,18 +4,27 @@ import './card.styles.scss';
 
 
 
-export const Card = ({artwork}) => (
+export const Card = ({photo}) => (
 
-    <div className="card">
-        <div className="card__image" style={{
-            backgroundImage : `url(https://www.artic.edu/iiif/2/${artwork.image_id}/full/400,/0/default.jpg)`
-        }}> 
-        </div>
-        <div className="card__content">
-            <h2 className="card__title">{artwork.title}</h2>
-            <p className="card__artist">{artwork.artist_title}</p>
-        </div>
-       
+<div className="card">
+  <div class="card__image" style={{
+      backgroundImage : `url(${photo.urls.full})`
+  }}></div>
+    <div className="card__text">
+        <span className="card__date">{photo.user.name}</span>
+        <h2 className='card__title'>Post One</h2>
+        <p className='card__description'>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
     </div>
+    <div className="card__stats">
+        <div className="stat">
+            <div className="value">5123</div>
+            <div className="type">Views</div>
+        </div>
+        <div className="stat">
+            <div className="value">32</div>
+            <div className="type">Comments</div>
+        </div>
+     </div>
+</div>
    
 )

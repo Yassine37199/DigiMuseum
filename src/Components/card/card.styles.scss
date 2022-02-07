@@ -1,13 +1,60 @@
 .card {
-    width: 400px;
-    height: 520px;
-    margin-left: 35px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "stats";
+
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba($color: #000000, $alpha: .5);
+    font-family: 'Roboto' , sans-serif;
+    text-align: center;
+    margin: 30px;
     overflow: hidden;
 
     &__image {
-        height: 330px;
+        grid-area: image;
         background-size: cover;
-        background-position: top;
+        background-position: center;
         clip-path: polygon(0 0 , 100% 0 , 100% 85% , 0 100%);
+        
+    }
+
+    &__text {
+        grid-area: text;
+        margin: 25px;
+    }
+
+    &__date {
+        color: rgb(255, 7, 110);
+        font-size:13px;
+    }
+
+    &__title {
+        font-size: 25px;
+    }
+
+    &__description {
+        color: gray;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__stats {
+        grid-area: stats;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        background-color: rgb(255, 7, 110);
+
+        .stat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            padding: 10px;
+            font-size: 12px;
+        }
     }
 }

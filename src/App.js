@@ -28,6 +28,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className='navbar'>
+          <div className='navbar__logo-box'>
+          </div>
+          <div className='navbar__navlist'>
+            <a className='navbar__navlink'>Photos</a>
+            <a className='navbar__navlink'>Shop</a>
+            <a className='navbar__navlink'>About</a>
+          </div>
+        </div>
         {<CardList photos={this.state.photos} />}
       </div>
     );

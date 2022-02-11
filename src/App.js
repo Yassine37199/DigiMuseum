@@ -1,6 +1,7 @@
 import './App.css';
 import { Component } from 'react';
 import { CardList } from './Components/card-list/card-list.component';
+import { Header } from './Components/header/header.component';
 
 class App extends Component {
 
@@ -8,36 +9,41 @@ class App extends Component {
     super(props);
 
     this.state = {
-      photos : []
+      photos : [],
+      searchText : ''
     }
   }
 
 
   componentDidMount() {
-
       fetch("https://api.unsplash.com/photos/?client_id=8aY1-7ly756Pu0Ts1NsFsYmpqAPKFh3MoquNQT9u7Ng")
       .then(res => res.json())
       .then(res => this.setState({
         photos : res
-      } , () => console.log(this.state.photos)))
+      }))
       
   }
+
+  handleChange = e => {
+    this.setState({
+      searchText : e.target.value
+    })
+  }
+
+
       
 
 
   render() {
+
+    const {photos , searchText} = this.state;
+
+    const FilteredPhotos = photos.filter(photo => photo.user.name.toUpperCase().includes(searchText.toUpperCase()))
+
     return (
       <div className="App">
-        <div className='navbar'>
-          <div className='navbar__logo-box'>
-          </div>
-          <div className='navbar__navlist'>
-            <a className='navbar__navlink'>Photos</a>
-            <a className='navbar__navlink'>Shop</a>
-            <a className='navbar__navlink'>About</a>
-          </div>
-        </div>
-        {<CardList photos={this.state.photos} />}
+        <Header placeholder="Search Creators" handleChange={e => this.handleChange(e)}/>
+        {<CardList photos={FilteredPhotos} />}
       </div>
     );
   }

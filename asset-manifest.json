@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/DigiMuseum/static/css/main.6256ee76.css",
+    "main.js": "/DigiMuseum/static/js/main.13235de0.js",
+    "static/js/787.1bddd098.chunk.js": "/DigiMuseum/static/js/787.1bddd098.chunk.js",
+    "index.html": "/DigiMuseum/index.html",
+    "static/media/magnifying-glass.svg": "/DigiMuseum/static/media/magnifying-glass.6586c44823c71d3e0cf06ec715940213.svg",
+    "static/media/chat.svg": "/DigiMuseum/static/media/chat.60b68ec512bcbc7e951560eec7250912.svg",
+    "static/media/bookmark.svg": "/DigiMuseum/static/media/bookmark.e7c8c45c617c578a89eb35647db0dacc.svg",
+    "main.6256ee76.css.map": "/DigiMuseum/static/css/main.6256ee76.css.map",
+    "main.13235de0.js.map": "/DigiMuseum/static/js/main.13235de0.js.map",
+    "787.1bddd098.chunk.js.map": "/DigiMuseum/static/js/787.1bddd098.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6256ee76.css",
+    "static/js/main.13235de0.js"
+  ]
+}
